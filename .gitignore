@@ -1,22 +1,3 @@
-# Casa Ans Villa - Git Ignore File
-
-# Large assets folder (images, videos, etc.)
-casa assets/
-
-# Node modules (if any)
-node_modules/
-
-# Environment variables
-.env
-.env.local
-.env.production
-
-# IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
-
 # OS generated files
 .DS_Store
 .DS_Store?
@@ -26,21 +7,26 @@ node_modules/
 ehthumbs.db
 Thumbs.db
 
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
 # Logs
 *.log
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
+# Dependencies
+node_modules/
 
-# Coverage directory used by tools like istanbul
-coverage/
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# Temporary folders
-tmp/
-temp/
+# Temporary files
+*.tmp
+*.temp
