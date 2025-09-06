@@ -1,22 +1,21 @@
-# Dependencies
+# Casa Ans Villa - Git Ignore File
+
+# Large assets folder (images, videos, etc.)
+casa assets/
+
+# Node modules (if any)
 node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
 # Environment variables
 .env
 .env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.production
 
 # IDE files
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
 
 # OS generated files
 .DS_Store
@@ -28,8 +27,10 @@ ehthumbs.db
 Thumbs.db
 
 # Logs
-logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # Runtime data
 pids
@@ -43,44 +44,3 @@ coverage/
 # Temporary folders
 tmp/
 temp/
-
-# Build outputs
-dist/
-build/
-
-# Cache
-.cache/
-.parcel-cache/
-
-# Optional npm cache directory
-.npm
-
-# Optional REPL history
-.node_repl_history
-
-# Output of 'npm pack'
-*.tgz
-
-# Yarn Integrity file
-.yarn-integrity
-
-# dotenv environment variables file
-.env
-
-# next.js build output
-.next
-
-# Nuxt.js build output
-.nuxt
-
-# Gatsby files
-.cache/
-public
-
-# Storybook build outputs
-.out
-.storybook-out
-
-# Temporary files
-*.tmp
-*.temp
