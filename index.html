@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Casa Ans Villa - Luxury Villa Experience. Discover our premium accommodations with world-class amenities and breathtaking views.">
+    <meta name="keywords" content="luxury villa, premium accommodation, Casa Ans Villa, vacation rental, luxury travel">
+    <meta name="author" content="Casa Ans Villa">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Casa Ans Villa - Luxury Villa Experience">
+    <meta property="og:description" content="Discover our premium accommodations with world-class amenities and breathtaking views.">
+    <meta property="og:image" content="casa assets/images/casa logo.png">
+    <meta property="og:type" content="website">
+    
+    <title>Casa Ans Villa - Luxury Villa Experience</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#D4AF37">
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="casa assets/images/casa logo.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="CASA Villa">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <img src="casa assets/images/casa logo.png" alt="Casa Ans Villa Logo" class="logo">
+                <span class="brand-name">Casa Ans Villa</span>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="nav-menu-desktop">
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link" data-translate="nav.home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link" data-translate="nav.about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link" data-translate="nav.services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#rooms" class="nav-link" data-translate="nav.rooms">Rooms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#gallery" class="nav-link" data-translate="nav.gallery">Gallery</a>
+                    </li>
+                                    <li class="nav-item">
+                    <a href="#contact" class="nav-link" data-translate="nav.contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#location" class="nav-link" data-translate="nav.location">Location</a>
+                </li>
+                    <li class="nav-item language-selector">
+                        <div class="language-dropdown">
+                            <button class="language-btn" id="language-btn">
+                                <i class="fas fa-globe"></i>
+                                <span id="current-lang">EN</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="language-menu" id="language-menu">
+                                <a href="#" class="language-option" data-lang="en">
+                                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAyMCAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMDAyNDY4Ii8+CjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIxLjE1IiBmaWxsPSIjRkZGRkZGIi8+CjxyZWN0IHk9IjIuMzEiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxLjE1IiBmaWxsPSIjRkZGRkZGIi8+CjxyZWN0IHk9IjQuNjIiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxLjE1IiBmaWxsPSIjRkZGRkZGIi8+CjxyZWN0IHk9IjYuOTMiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxLjE1IiBmaWxsPSIjRkZGRkZGIi8+CjxyZWN0IHk9IjkuMjQiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxLjE1IiBmaWxsPSIjRkZGRkZGIi8+CjxyZWN0IHk9IjExLjU1IiB3aWR0aD0iMjAiIGhlaWdodD0iMS4xNSIgZmlsbD0iI0ZGRkZGRiIvPgo8cmVjdCB5PSIxMy44NiIgd2lkdGg9IjIwIiBoZWlnaHQ9IjEuMTUiIGZpbGw9IiNGRkZGRkYiLz4KPHJlY3QgeD0iOC4zMSIgd2lkdGg9IjMuMzgiIGhlaWdodD0iMTUiIGZpbGw9IiNGRkZGRkYiLz4KPHJlY3QgeD0iOS4yNCIgd2lkdGg9IjEuNTMiIGhlaWdodD0iMTUiIGZpbGw9IiNGRkZGRkYiLz4KPC9zdmc+" alt="🇺🇸" class="flag-icon"> English
+                                </a>
+                                <a href="#" class="language-option" data-lang="es">
+                                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAyMCAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjQzYwQzE5Ii8+CjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSI1IiBmaWxsPSIjRkZGRkZGIi8+CjxyZWN0IHk9IjEwIiB3aWR0aD0iMjAiIGhlaWdodD0iNSIgZmlsbD0iI0ZGRkZGRiIvPgo8cmVjdCB5PSI1IiB3aWR0aD0iMjAiIGhlaWdodD0iNSIgZmlsbD0iI0ZGRkZGRiIvPgo8L3N2Zz4=" alt="🇪🇸" class="flag-icon"> Español
+                                </a>
+                                <a href="#" class="language-option" data-lang="de">
+                                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAyMCAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjUiIGZpbGw9IiMwMDAwMDAiLz4KPHJlY3QgeT0iNSIgd2lkdGg9IjIwIiBoZWlnaHQ9IjUiIGZpbGw9IiNGRkAwMDAiLz4KPHJlY3QgeT0iMTAiIHdpZHRoPSIyMCIgaGVpZ2h0PSI1IiBmaWxsPSIjRkZEMDAwIi8+Cjwvc3ZnPg==" alt="🇩🇪" class="flag-icon"> Deutsch
+                                </a>
+                                <a href="#" class="language-option" data-lang="fr">
+                                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAyMCAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMCIgd2lkdGg9IjYuNjciIGhlaWdodD0iMTUiIGZpbGw9IiMwMDI2OTUiLz4KPHJlY3QgeD0iNi42NyIgd2lkdGg9IjYuNjciIGhlaWdodD0iMTUiIGZpbGw9IiNGRkZGRkYiLz4KPHJlY3QgeD0iMTMuMzMiIHdpZHRoPSI2LjY3IiBoZWlnaHQ9IjE1IiBmaWxsPSIjRkYwMDAwIi8+Cjwvc3ZnPg==" alt="🇫🇷" class="flag-icon"> Français
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <ul class="mobile-nav-menu">
+                <li class="mobile-nav-item">
+                    <a href="#home" class="mobile-nav-link" data-translate="nav.home">Home</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#about" class="mobile-nav-link" data-translate="nav.about">About</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#services" class="mobile-nav-link" data-translate="nav.services">Services</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#rooms" class="mobile-nav-link" data-translate="nav.rooms">Rooms</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#gallery" class="mobile-nav-link" data-translate="nav.gallery">Gallery</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#contact" class="mobile-nav-link" data-translate="nav.contact">Contact</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#location" class="mobile-nav-link" data-translate="nav.location">Location</a>
+                </li>
+                <li class="mobile-nav-item mobile-language-selector">
+                    <div class="mobile-language-dropdown">
+                        <button class="mobile-language-btn" id="mobile-language-btn">
+                            <i class="fas fa-globe"></i>
+                            <span id="mobile-current-lang">EN</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="mobile-language-menu" id="mobile-language-menu">
+                            <a href="#" class="mobile-language-option" data-lang="en">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAyMCAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMDAyNDY4Ii8+CjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIxLjE1IiBmaWxsPSIjRkZGRkZGIi8+CjxyZWN0IHk9IjIuMzEiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxLjE1IiBmaWxsPSIjRkZGRkZGIi8+CjxyZWN0IHk9IjQuNjIiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxLjE1IiBmaWxsPSIjRkZGRkZGIi8+CjxyZWN0IHk9IjYuOTMiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxLjE1IiBmaWxsPSIjRkZGRkZGIi8+CjxyZWN0IHk9IjkuMjQiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxLjE1IiBmaWxsPSIjRkZGRkZGIi8+CjxyZWN0IHk9IjExLjU1IiB3aWR0aD0iMjAiIGhlaWdodD0iMS4xNSIgZmlsbD0iI0ZGRkZGRiIvPgo8cmVjdCB5PSIxMy44NiIgd2lkdGg9IjIwIiBoZWlnaHQ9IjEuMTUiIGZpbGw9IiNGRkZGRkYiLz4KPHJlY3QgeD0iOC4zMSIgd2lkdGg9IjMuMzgiIGhlaWdodD0iMTUiIGZpbGw9IiNGRkZGRkYiLz4KPHJlY3QgeD0iOS4yNCIgd2lkdGg9IjEuNTMiIGhlaWdodD0iMTUiIGZpbGw9IiNGRkZGRkYiLz4KPC9zdmc+" alt="🇺🇸" class="flag-icon"> English
+                            </a>
+                            <a href="#" class="mobile-language-option" data-lang="es">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAyMCAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjQzYwQzE5Ii8+CjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSI1IiBmaWxsPSIjRkZGRkZGIi8+CjxyZWN0IHk9IjEwIiB3aWR0aD0iMjAiIGhlaWdodD0iNSIgZmlsbD0iI0ZGRkZGRiIvPgo8cmVjdCB5PSI1IiB3aWR0aD0iMjAiIGhlaWdodD0iNSIgZmlsbD0iI0ZGRkZGRiIvPgo8L3N2Zz4=" alt="🇪🇸" class="flag-icon"> Español
+                            </a>
+                            <a href="#" class="mobile-language-option" data-lang="de">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAyMCAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjUiIGZpbGw9IiMwMDAwMDAiLz4KPHJlY3QgeT0iNSIgd2lkdGg9IjIwIiBoZWlnaHQ9IjUiIGZpbGw9IiNGRkAwMDAiLz4KPHJlY3QgeT0iMTAiIHdpZHRoPSIyMCIgaGVpZ2h0PSI1IiBmaWxsPSIjRkZEMDAwIi8+Cjwvc3ZnPg==" alt="🇩🇪" class="flag-icon"> Deutsch
+                            </a>
+                            <a href="#" class="mobile-language-option" data-lang="fr">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAyMCAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMCIgd2lkdGg9IjYuNjciIGhlaWdodD0iMTUiIGZpbGw9IiMwMDI2OTUiLz4KPHJlY3QgeD0iNi42NyIgd2lkdGg9IjYuNjciIGhlaWdodD0iMTUiIGZpbGw9IiNGRkZGRkYiLz4KPHJlY3QgeD0iMTMuMzMiIHdpZHRoPSI2LjY3IiBoZWlnaHQ9IjE1IiBmaWxsPSIjRkYwMDAwIi8+Cjwvc3ZnPg==" alt="🇫🇷" class="flag-icon"> Français
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-video">
+            <video autoplay muted loop playsinline>
+                <source src="casa assets/intro video/CASA ANS villa 2.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line" data-translate="hero.luxury">Luxury</span>
+                <span class="title-line" data-translate="hero.redefined">Redefined</span>
+            </h1>
+            <p class="hero-subtitle" data-translate="hero.subtitle">Experience unparalleled elegance and comfort at Casa Ans Villa</p>
+            <div class="hero-buttons">
+                <a href="#rooms" class="btn btn-primary" data-translate="hero.explore_rooms">Explore Rooms</a>
+                <a href="#contact" class="btn btn-secondary" data-translate="hero.book_now">Book Now</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-translate="about.title">About Casa Ans Villa</h2>
+                <p class="section-subtitle" data-translate="about.subtitle">Where luxury meets comfort in perfect harmony</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 data-translate="about.experience_title">Exceptional Living Experience</h3>
+                    <p data-translate="about.description1">At Casa Ans Villa, we believe that luxury is not just about opulence, but about creating meaningful experiences that stay with you forever. Our meticulously designed villas offer the perfect blend of modern sophistication and timeless elegance.</p>
+                    <p data-translate="about.description2">Each space has been carefully curated to provide our guests with an unparalleled level of comfort and style, ensuring every moment spent with us is truly memorable.</p>
+                </div>
+                <div class="about-image">
+                    <img src="casa assets/images/hero images/hero 1.JPG" alt="CASA Villa Exterior" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="services-jumbotron">
+            <div class="container">
+                <div class="jumbotron-content">
+                    <h2 class="jumbotron-title" data-translate="services.title">Our Premium Services</h2>
+                    <p class="jumbotron-subtitle" data-translate="services.subtitle">Everything you need for the perfect luxury stay</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-wine-bottle"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 data-translate="services.minibar_title">Built-in Minibar</h3>
+                        <p data-translate="services.minibar_desc">Fully stocked minibar with premium beverages and snacks for your convenience</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-parking"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 data-translate="services.parking_title">Free Parking</h3>
+                        <p data-translate="services.parking_desc">Complimentary secure parking space for your vehicle during your stay</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 data-translate="services.airport_title">Airport Pickup</h3>
+                        <p data-translate="services.airport_desc">Arranged and paid airport pickup service for a seamless arrival experience</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 data-translate="services.kitchen_title">Fully Equipped Kitchen</h3>
+                        <p data-translate="services.kitchen_desc">Complete kitchen with modern appliances - cook yourself or request our paid chef service</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 data-translate="services.wifi_title">Free High-Speed WiFi</h3>
+                        <p data-translate="services.wifi_desc">Fiber-fast internet connection throughout the villa for all your digital needs</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-concierge-bell"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 data-translate="services.concierge_title">24/7 Concierge</h3>
+                        <p data-translate="services.concierge_desc">Round-the-clock assistance for any requests or special arrangements</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="rooms">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Rooms</h2>
+                <p class="section-subtitle">Luxurious accommodations designed for your comfort</p>
+            </div>
+            <div class="rooms-grid">
+                <!-- Room 1 -->
+                <div class="room-card" data-room="1">
+                    <div class="room-image">
+                        <img src="casa assets/images/room 1 images/1.JPG" alt="Executive Suite" loading="lazy">
+                        <div class="room-price-badge">From $100/night</div>
+                    </div>
+                    <div class="room-content">
+                        <h3>Executive Suite</h3>
+                        <p>Spacious and elegantly appointed with premium furnishings and modern amenities.</p>
+                        <div class="room-features">
+                            <span class="feature-tag">King Bed</span>
+                            <span class="feature-tag">Ocean View</span>
+                            <span class="feature-tag">Private Balcony</span>
+                        </div>
+                        <button class="btn btn-outline view-details-btn" data-room="1">
+                            <i class="fas fa-eye"></i> View Details
+                        </button>
+                    </div>
+                    
+                    <!-- Expandable Details -->
+                    <div class="room-details-expanded" id="room-details-1">
+                        <div class="room-details-content">
+                            <div class="room-details-header">
+                                <h4>Executive Suite</h4>
+                                <div class="room-price">From $100/night</div>
+                            </div>
+                            
+                            <div class="room-details-body">
+                                <div class="room-images-gallery">
+                                    <div class="main-room-image">
+                                        <img src="casa assets/images/room 1 images/1.JPG" alt="Executive Suite" id="main-image-1">
+                                    </div>
+                                    <div class="room-thumbnails">
+                                        <img src="casa assets/images/room 1 images/1.JPG" alt="Executive Suite" class="thumbnail active" data-room="1" data-image="0">
+                                        <img src="casa assets/images/room 1 images/2.JPG" alt="Executive Suite" class="thumbnail" data-room="1" data-image="1">
+                                        <img src="casa assets/images/room 1 images/3.JPG" alt="Executive Suite" class="thumbnail" data-room="1" data-image="2">
+                                        <img src="casa assets/images/room 1 images/4.JPG" alt="Executive Suite" class="thumbnail" data-room="1" data-image="3">
+                                        <img src="casa assets/images/room 1 images/bathroom.JPG" alt="Executive Suite Bathroom" class="thumbnail" data-room="1" data-image="4">
+                                    </div>
+                                </div>
+                                
+                                <div class="room-details-info">
+                                    <div class="room-description">
+                                        <h5>About This Room</h5>
+                                        <p>Our Executive Suite offers the perfect blend of luxury and functionality. Featuring a spacious layout with premium furnishings, this suite provides an ideal retreat for business travelers and leisure guests alike.</p>
+                                    </div>
+                                    
+                                    <div class="room-amenities">
+                                        <h5>Amenities & Features</h5>
+                                        <ul class="amenities-list">
+                                            <li><i class="fas fa-check"></i> King-size bed with premium linens</li>
+                                            <li><i class="fas fa-check"></i> Private balcony with ocean views</li>
+                                            <li><i class="fas fa-check"></i> Marble bathroom with rain shower</li>
+                                            <li><i class="fas fa-check"></i> Mini-bar and coffee station</li>
+                                            <li><i class="fas fa-check"></i> High-speed WiFi</li>
+                                            <li><i class="fas fa-check"></i> 24/7 room service</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="room-actions">
+                                        <button class="btn btn-primary book-room-btn" data-room="1">
+                                            <i class="fas fa-calendar-check"></i> Book Now
+                                        </button>
+                                        <button class="btn btn-outline close-details-btn" data-room="1">
+                                            <i class="fas fa-times"></i> Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 2 -->
+                <div class="room-card" data-room="2">
+                    <div class="room-image">
+                        <img src="casa assets/images/room 2 images/bed first image.JPG" alt="Deluxe Villa" loading="lazy">
+                        <div class="room-price-badge">From $120/night</div>
+                    </div>
+                    <div class="room-content">
+                        <h3>Deluxe Villa</h3>
+                        <p>Exquisite design meets ultimate comfort in this stunning villa accommodation.</p>
+                        <div class="room-features">
+                            <span class="feature-tag">Master Suite</span>
+                            <span class="feature-tag">Garden View</span>
+                            <span class="feature-tag">Jacuzzi</span>
+                        </div>
+                        <button class="btn btn-outline view-details-btn" data-room="2">
+                            <i class="fas fa-eye"></i> View Details
+                        </button>
+                    </div>
+                    
+                    <!-- Expandable Details -->
+                    <div class="room-details-expanded" id="room-details-2">
+                        <div class="room-details-content">
+                            <div class="room-details-header">
+                                <h4>Deluxe Villa</h4>
+                                <div class="room-price">From $120/night</div>
+                            </div>
+                            
+                            <div class="room-details-body">
+                                <div class="room-images-gallery">
+                                    <div class="main-room-image">
+                                        <img src="casa assets/images/room 2 images/bed first image.JPG" alt="Deluxe Villa" id="main-image-2">
+                                    </div>
+                                    <div class="room-thumbnails">
+                                        <img src="casa assets/images/room 2 images/bed first image.JPG" alt="Deluxe Villa" class="thumbnail active" data-room="2" data-image="0">
+                                        <img src="casa assets/images/room 2 images/NENE0011-Enhanced-NR.JPG" alt="Deluxe Villa" class="thumbnail" data-room="2" data-image="1">
+                                        <img src="casa assets/images/room 2 images/NENE0037-Enhanced-NR.JPG" alt="Deluxe Villa" class="thumbnail" data-room="2" data-image="2">
+                                        <img src="casa assets/images/room 2 images/NENE0040-Enhanced-NR_1.JPG" alt="Deluxe Villa" class="thumbnail" data-room="2" data-image="3">
+                                        <img src="casa assets/images/room 2 images/washroom1.JPG" alt="Deluxe Villa Bathroom" class="thumbnail" data-room="2" data-image="4">
+                                    </div>
+                                </div>
+                                
+                                <div class="room-details-info">
+                                    <div class="room-description">
+                                        <h5>About This Room</h5>
+                                        <p>Experience unparalleled luxury in our Deluxe Villa. This stunning accommodation features contemporary design elements combined with traditional elegance, creating a truly unique and memorable stay.</p>
+                                    </div>
+                                    
+                                    <div class="room-amenities">
+                                        <h5>Amenities & Features</h5>
+                                        <ul class="amenities-list">
+                                            <li><i class="fas fa-check"></i> Master bedroom with garden views</li>
+                                            <li><i class="fas fa-check"></i> Private jacuzzi</li>
+                                            <li><i class="fas fa-check"></i> Spacious living area</li>
+                                            <li><i class="fas fa-check"></i> Gourmet kitchen</li>
+                                            <li><i class="fas fa-check"></i> Private garden access</li>
+                                            <li><i class="fas fa-check"></i> Personal concierge service</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="room-actions">
+                                        <button class="btn btn-primary book-room-btn" data-room="2">
+                                            <i class="fas fa-calendar-check"></i> Book Now
+                                        </button>
+                                        <button class="btn btn-outline close-details-btn" data-room="2">
+                                            <i class="fas fa-times"></i> Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 3 -->
+                <div class="room-card" data-room="3">
+                    <div class="room-image">
+                        <img src="casa assets/images/room 3 images/bed view first.JPG" alt="Presidential Suite" loading="lazy">
+                        <div class="room-price-badge">From $140/night</div>
+                    </div>
+                    <div class="room-content">
+                        <h3>Presidential Suite</h3>
+                        <p>The pinnacle of luxury with panoramic views and exclusive amenities.</p>
+                        <div class="room-features">
+                            <span class="feature-tag">Premium Bedding</span>
+                            <span class="feature-tag">Panoramic View</span>
+                            <span class="feature-tag">Butler Service</span>
+                        </div>
+                        <button class="btn btn-outline view-details-btn" data-room="3">
+                            <i class="fas fa-eye"></i> View Details
+                        </button>
+                    </div>
+                    
+                    <!-- Expandable Details -->
+                    <div class="room-details-expanded" id="room-details-3">
+                        <div class="room-details-content">
+                            <div class="room-details-header">
+                                <h4>Presidential Suite</h4>
+                                <div class="room-price">From $140/night</div>
+                            </div>
+                            
+                            <div class="room-details-body">
+                                <div class="room-images-gallery">
+                                    <div class="main-room-image">
+                                        <img src="casa assets/images/room 3 images/bed view first.JPG" alt="Presidential Suite" id="main-image-3">
+                                    </div>
+                                    <div class="room-thumbnails">
+                                        <img src="casa assets/images/room 3 images/bed view first.JPG" alt="Presidential Suite" class="thumbnail active" data-room="3" data-image="0">
+                                        <img src="casa assets/images/room 3 images/NENE0083-Enhanced-NR.JPG" alt="Presidential Suite" class="thumbnail" data-room="3" data-image="1">
+                                        <img src="casa assets/images/room 3 images/NENE0092-Enhanced-NR.JPG" alt="Presidential Suite" class="thumbnail" data-room="3" data-image="2">
+                                        <img src="casa assets/images/room 3 images/NENE0098-Enhanced-NR.JPG" alt="Presidential Suite" class="thumbnail" data-room="3" data-image="3">
+                                        <img src="casa assets/images/room 3 images/washroom1.JPG" alt="Presidential Suite Bathroom" class="thumbnail" data-room="3" data-image="4">
+                                    </div>
+                                </div>
+                                
+                                <div class="room-details-info">
+                                    <div class="room-description">
+                                        <h5>About This Room</h5>
+                                        <p>The pinnacle of luxury accommodation, our Presidential Suite offers panoramic views and exclusive amenities. This suite is designed for those who demand the very best in comfort and sophistication.</p>
+                                    </div>
+                                    
+                                    <div class="room-amenities">
+                                        <h5>Amenities & Features</h5>
+                                        <ul class="amenities-list">
+                                            <li><i class="fas fa-check"></i> Panoramic city and ocean views</li>
+                                            <li><i class="fas fa-check"></i> Separate living and dining areas</li>
+                                            <li><i class="fas fa-check"></i> Premium bedding and linens</li>
+                                            <li><i class="fas fa-check"></i> Butler service</li>
+                                            <li><i class="fas fa-check"></i> Private elevator access</li>
+                                            <li><i class="fas fa-check"></i> Exclusive lounge access</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="room-actions">
+                                        <button class="btn btn-primary book-room-btn" data-room="3">
+                                            <i class="fas fa-calendar-check"></i> Book Now
+                                        </button>
+                                        <button class="btn btn-outline close-details-btn" data-room="3">
+                                            <i class="fas fa-times"></i> Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 4 -->
+                <div class="room-card" data-room="4">
+                    <div class="room-image">
+                        <img src="casa assets/images/room 4 images/bed view.JPG" alt="Royal Villa" loading="lazy">
+                        <div class="room-price-badge">From $85/night</div>
+                    </div>
+                    <div class="room-content">
+                        <h3>Royal Villa</h3>
+                        <p>Unparalleled luxury in our most exclusive accommodation with private access.</p>
+                        <div class="room-features">
+                            <span class="feature-tag">Private Pool</span>
+                            <span class="feature-tag">Mountain View</span>
+                            <span class="feature-tag">Personal Chef</span>
+                        </div>
+                        <button class="btn btn-outline view-details-btn" data-room="4">
+                            <i class="fas fa-eye"></i> View Details
+                        </button>
+                    </div>
+                    
+                    <!-- Expandable Details -->
+                    <div class="room-details-expanded" id="room-details-4">
+                        <div class="room-details-content">
+                            <div class="room-details-header">
+                                <h4>Royal Villa</h4>
+                                <div class="room-price">From $85/night</div>
+                            </div>
+                            
+                            <div class="room-details-body">
+                                <div class="room-images-gallery">
+                                    <div class="main-room-image">
+                                        <img src="casa assets/images/room 4 images/bed view.JPG" alt="Royal Villa" id="main-image-4">
+                                    </div>
+                                    <div class="room-thumbnails">
+                                        <img src="casa assets/images/room 4 images/bed view.JPG" alt="Royal Villa" class="thumbnail active" data-room="4" data-image="0">
+                                        <img src="casa assets/images/room 4 images/NENE9834_3.JPG" alt="Royal Villa" class="thumbnail" data-room="4" data-image="1">
+                                        <img src="casa assets/images/room 4 images/washroom sink.JPG" alt="Royal Villa Bathroom" class="thumbnail" data-room="4" data-image="2">
+                                        <img src="casa assets/images/room 4 images/washroom1.JPG" alt="Royal Villa Bathroom" class="thumbnail" data-room="4" data-image="3">
+                                    </div>
+                                </div>
+                                
+                                <div class="room-details-info">
+                                    <div class="room-description">
+                                        <h5>About This Room</h5>
+                                        <p>Our most exclusive accommodation, the Royal Villa offers complete privacy and luxury. This magnificent villa features its own private pool, personal chef service, and breathtaking mountain views.</p>
+                                    </div>
+                                    
+                                    <div class="room-amenities">
+                                        <h5>Amenities & Features</h5>
+                                        <ul class="amenities-list">
+                                            <li><i class="fas fa-check"></i> Private infinity pool</li>
+                                            <li><i class="fas fa-check"></i> Mountain and valley views</li>
+                                            <li><i class="fas fa-check"></i> Personal chef service</li>
+                                            <li><i class="fas fa-check"></i> Private butler</li>
+                                            <li><i class="fas fa-check"></i> Multiple bedrooms</li>
+                                            <li><i class="fas fa-check"></i> Exclusive spa access</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="room-actions">
+                                        <button class="btn btn-primary book-room-btn" data-room="4">
+                                            <i class="fas fa-calendar-check"></i> Book Now
+                                        </button>
+                                        <button class="btn btn-outline close-details-btn" data-room="4">
+                                            <i class="fas fa-times"></i> Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Gallery</h2>
+                <p class="section-subtitle">A visual journey through our luxury spaces</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="interior">
+                    <img src="casa assets/images/gallery/NENE0143-Enhanced-NR.JPG" alt="Luxury Interior" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="interior">
+                    <img src="casa assets/images/gallery/NENE0167-Enhanced-NR.JPG" alt="Elegant Living Space" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="interior">
+                    <img src="casa assets/images/gallery/NENE0235.JPG" alt="Modern Design" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="interior">
+                    <img src="casa assets/images/gallery/NENE0253-Enhanced-NR.JPG" alt="Luxury Bedroom" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="interior">
+                    <img src="casa assets/images/gallery/NENE0272.JPG" alt="Premium Amenities" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="exterior">
+                    <img src="casa assets/images/hero images/hero 2.JPG" alt="Villa Exterior" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-subtitle">Ready to experience luxury? Get in touch with us today</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>MV3M+32W Accra<br>Ghana</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone & WhatsApp</h4>
+                            <p>+233 54 236 3365</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@casavilla.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Concierge Hours</h4>
+                            <p>24/7 Available</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone">
+                    </div>
+                    <div class="form-group">
+                        <select id="room-type" name="room-type">
+                            <option value="">Select Room Type</option>
+                            <option value="executive">Executive Suite</option>
+                            <option value="deluxe">Deluxe Villa</option>
+                            <option value="presidential">Presidential Suite</option>
+                            <option value="royal">Royal Villa</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Map Section -->
+    <section id="location" class="location">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Find Us</h2>
+                <p class="section-subtitle">Located in the heart of Accra, Ghana</p>
+            </div>
+            <div class="location-content">
+                <div class="location-info">
+                    <div class="location-details">
+                        <h3>Our Location</h3>
+                        <p><strong>Address:</strong> MV3M+32W Accra, Ghana</p>
+                        <p><strong>Phone:</strong> +233 54 236 3365</p>
+                        <p><strong>WhatsApp:</strong> +233 54 236 3365</p>
+                        <p><strong>Email:</strong> info@casavilla.com</p>
+                        <div class="location-actions">
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=5.6527500,-0.1174167" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-route"></i> Get Directions
+                            </a>
+                            <a href="tel:+233542363365" class="btn btn-secondary">
+                                <i class="fas fa-phone"></i> Call Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="location-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.123456789!2d-0.1174167!3d5.6527500!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMzknMDkuOSJOIDDCsDA3JzAyLjciVw!5e0!3m2!1sen!2sgh!4v1234567890123!5m2!1sen!2sgh"
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="casa assets/images/casa logo.png" alt="Casa Ans Villa Logo" class="logo">
+                        <span class="brand-name">Casa Ans Villa</span>
+                    </div>
+                    <p>Experience luxury redefined at Casa Ans Villa. Where every detail matters and every moment is extraordinary.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#rooms">Rooms</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#location">Location</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Built-in Minibar</a></li>
+                        <li><a href="#services">Free Parking</a></li>
+                        <li><a href="#services">Airport Pickup</a></li>
+                        <li><a href="#services">Fully Equipped Kitchen</a></li>
+                        <li><a href="#services">Free High-Speed WiFi</a></li>
+                        <li><a href="#services">24/7 Concierge</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> MV3M+32W Accra, Ghana</p>
+                    <p><i class="fas fa-phone"></i> +233 54 236 3365</p>
+                    <p><i class="fab fa-whatsapp"></i> +233 54 236 3365</p>
+                    <p><i class="fas fa-envelope"></i> info@casavilla.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CASA Villa. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Floating WhatsApp Button -->
+    <div class="whatsapp-float" id="whatsapp-float">
+        <a href="https://wa.me/233542363365" target="_blank" rel="noopener noreferrer" class="whatsapp-link">
+            <i class="fab fa-whatsapp"></i>
+            <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
